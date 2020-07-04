@@ -4,6 +4,8 @@ import InputFields from "./components/InputFields";
 import LoginForm from "./components/LoginForm";
 import { authenticate } from './modules/auth';
 import DisplayPerformanceData from "./components/DisplayPerformanceData"
+import { Button, Grid } from 'semantic-ui-react'
+
 
 class App extends Component {
   state = {
@@ -16,6 +18,8 @@ class App extends Component {
     entrySaved: false,
     renderIndex: false
   };
+
+
 
   onLogin = async e => {
     e.preventDefault();
@@ -45,12 +49,20 @@ class App extends Component {
       case !renderLoginForm && !authenticated:
         renderLogin = (
           <>
-            <button
-              id="login"
+           <Grid columns={6}>
+    <Grid.Column></Grid.Column>
+    <Grid.Column>
+    <Button
               onClick={() => this.setState({ renderLoginForm: true })}
+              size="large"
+              color="blue"
+              floated="left"
             >
               Login
-            </button>
+            </Button>
+    </Grid.Column>
+    </Grid>
+
             <p id="message">{message}</p>
           </>
         );
