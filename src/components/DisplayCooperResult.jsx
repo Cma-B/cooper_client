@@ -1,5 +1,5 @@
 import React from "react";
-import coopercalculator from '../modules/cooperCalculator';
+import cooperCalculator from '../modules/cooperCalculator';
 import { saveData } from '../modules/performanceData';
 
 const DisplayCooperResult = ({ 
@@ -10,7 +10,7 @@ const DisplayCooperResult = ({
   entrySaved,
   entryHandler
 }) => {
-  const result = coopercalculator(distance, gender, age);
+  const result = cooperCalculator(distance, gender, age);
 
   const propsPassed = distance && age ? true : false;
 
@@ -25,7 +25,7 @@ const DisplayCooperResult = ({
           {authenticated && !entrySaved ? (
             <button
             id="save-result"
-            onClick={() => saveData(result, entryHandler)}
+            onClick={() => saveData (result, distance, entryHandler)}
             >
               Save entry
             </button>
