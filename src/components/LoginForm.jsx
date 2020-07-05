@@ -1,11 +1,12 @@
 import React from "react";
-import { Button, Checkbox, Form, Grid } from 'semantic-ui-react'
+import { Button, Checkbox, Form, Grid, Segment } from 'semantic-ui-react'
 
 const LoginForm = ({ submitFormHandler }) => {
     return (
+              
 <Grid columns={2} relaxed='very' style={{ marginLeft: '15em', marginTop:'5em' }} >
-
-        <Form onSubmit ={submitFormHandler} id="login-form" >
+<Segment inverted>
+        <Form onSubmit ={submitFormHandler} id="login-form" inverted>
         <Form.Field >
           <label>Email</label>
           <input name="email" type="email" id="email" placeholder='Email' />
@@ -19,8 +20,9 @@ const LoginForm = ({ submitFormHandler }) => {
         </Form.Field>
         <Button type='submit' id="submit">Submit</Button>
       </Form>
-     
+      </Segment>
       </Grid>
+      
     );
 };
 
