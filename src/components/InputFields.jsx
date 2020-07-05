@@ -54,7 +54,11 @@ Track your fitness by the Cooper Test
   </Grid.Column>
     </Grid>
     
-    <Divider vertical style={{fontSize:'1em', fontStyle:'italic', fontFamily:'Bradley Hand, cursive' }}>THE COOPER TEST</Divider>
+    <Divider vertical
+     style={{fontSize:'1em',
+     fontStyle:'italic', 
+     fontFamily:'Bradley Hand, cursive' }}
+     >THE COOPER TEST</Divider>
    
     </>
   );
