@@ -56,7 +56,7 @@ class App extends Component {
               onClick={() => this.setState({ renderLoginForm: true })}
               size="large"
               color="black"
-              floated="center"
+              style={{ marginLeft: '5em' }}
             >
               Login
             </Button>

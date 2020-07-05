@@ -54,7 +54,7 @@ Track your fitness by the Cooper Test
   </Grid.Column>
     </Grid>
     
-    <Divider vertical><Icon size='massive'  name='heartbeat' /></Divider>
+    <Divider vertical style={{fontSize:'1em', fontStyle:'italic', fontFamily:'Bradley Hand, cursive' }}>THE COOPER TEST</Divider>
    
     </>
   );
