@@ -4,7 +4,7 @@ import InputFields from "./components/InputFields";
 import LoginForm from "./components/LoginForm";
 import { authenticate } from './modules/auth';
 import DisplayPerformanceData from "./components/DisplayPerformanceData"
-import { Button, Grid } from 'semantic-ui-react'
+import { Button, Grid, Form, Icon, Message, Segment, Divider } from 'semantic-ui-react'
 
 
 class App extends Component {
@@ -64,30 +64,57 @@ class App extends Component {
     </Grid>
 
             <p id="message">{message}</p>
+    
           </>
         );
         break;
         
       case authenticated:
         renderLogin = (
-          <p id="message">Hi {JSON.parse(sessionStorage.getItem("credentials")).uid}</p>
+       
+          <>
+          <Grid style={{ marginLeft: '2em', marginTop:'3em'}}>
+            <Grid.Column width={7}>
+          <Message attached='header' color="black" floating
+          id="message"  
+          style={{fontSize:'1em',
+          fontWeight:'bold',
+          fontStyle:'normal', 
+          fontFamily:'"Times New Roman", Times, serif' }}
+          >
+         <Icon name='user' size='large'/>
+       
+         Hi {JSON.parse(sessionStorage.getItem("credentials")).uid} 
+          
+          </Message> 
+          </Grid.Column>
+          </Grid>         
+         </>  
+          
         );
         if (this.state.renderIndex) {
           performanceDataIndex = (
             <>
+    
               <DisplayPerformanceData
                 updateIndex={this.state.updateIndex}
                 indexUpdated={() => this.setState({ updateIndex: false })}
               />
-              <button onClick={() => this.setState({ renderIndex: false })}>Hide past entries</button>
+
+              <Button onClick={() => this.setState({ renderIndex: false })}>Hide past entries</Button>
+    
+     
             </>
           )
         } else {
         performanceDataIndex = (
-          <button id="show-index" onClick={() => this.setState({ renderIndex: true })}>Show past entries</button>
+
+          <Button id="show-index" onClick={() => this.setState({ renderIndex: true })}>Show past entries</Button>
+         
         )
       }  
     }
+    
 
     return (
       <>
