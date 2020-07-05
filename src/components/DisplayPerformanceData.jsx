@@ -49,16 +49,14 @@ class DisplayPerformanceData extends Component {
       }
       
       dataIndex = (
-        
+
+
             <Line 
             data={data}
-            width={500}
+            width={2000}
             height={300}
             options={{ maintainAspectRatio: false }}
           />
-        
-
-    
        
       )
     }

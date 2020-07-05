@@ -49,22 +49,19 @@ class App extends Component {
       case !renderLoginForm && !authenticated:
         renderLogin = (
           <>
-           <Grid columns={6}>
-    <Grid.Column></Grid.Column>
+           <Grid >
+    
     <Grid.Column>
     <Button
               onClick={() => this.setState({ renderLoginForm: true })}
               size="large"
               color="black"
-              style={{ marginLeft: '5em' }}
+              style={{ marginLeft: '20em' }}
             >
               Login
             </Button>
     </Grid.Column>
     </Grid>
-
-            <p id="message">{message}</p>
-    
           </>
         );
         break;
@@ -73,10 +70,8 @@ class App extends Component {
         renderLogin = (
        
           <>
-         
- 
-          <Grid style={{ marginLeft: '3em', marginTop:'3em'}}>
-          <Grid.Column width={7}>
+          <Grid >
+          <Grid.Column width={7} style={{ marginLeft: '4em', marginTop:'1em'}} >
           <Message attached='header' color="black" floating
           id="message"  
           style={{fontSize:'1em',
@@ -97,16 +92,12 @@ class App extends Component {
         if (this.state.renderIndex) {
           performanceDataIndex = (
             <>
-    
-          <Grid columns={6}>
-        
-          <Grid.Column>
-    
               <DisplayPerformanceData
                 updateIndex={this.state.updateIndex}
                 indexUpdated={() => this.setState({ updateIndex: false })}
               />
-
+        <Grid columns={6}>
+        <Grid.Column>
               <Button
                  size="large"
                  color="black"
@@ -122,9 +113,7 @@ class App extends Component {
         performanceDataIndex = (
        
           <Grid columns={6}>
-          
           <Grid.Column>
-
           <Button
           size="large"
           color="black"
@@ -152,11 +141,7 @@ class App extends Component {
         entryHandler={() => this.setState({ entrySaved: true, updateIndex: true })}
 />
 {performanceDataIndex}
-<Divider vertical
-  style={{fontSize:'1em',
-  fontStyle:'italic', 
-  fontFamily:'Bradley Hand, cursive' }}
-  >THE COOPER TEST</Divider>
+
       </>
     );
   }
