@@ -4,7 +4,7 @@ import InputFields from "./components/InputFields";
 import LoginForm from "./components/LoginForm";
 import { authenticate } from './modules/auth';
 import DisplayPerformanceData from "./components/DisplayPerformanceData"
-import { Button, Grid, Form, Icon, Message, Segment, Divider } from 'semantic-ui-react'
+import { Button, Grid, Form, Icon, Message, Segment, Divider, Header, Placeholder } from 'semantic-ui-react'
 
 
 class App extends Component {
@@ -73,9 +73,10 @@ class App extends Component {
         renderLogin = (
        
           <>
+         
  
           <Grid style={{ marginLeft: '3em', marginTop:'3em'}}>
-            <Grid.Column width={7}>
+          <Grid.Column width={7}>
           <Message attached='header' color="black" floating
           id="message"  
           style={{fontSize:'1em',
@@ -89,8 +90,7 @@ class App extends Component {
           
           </Message> 
           </Grid.Column>
-          </Grid> 
-             
+          </Grid>      
          </>    
         );
 
@@ -134,9 +134,7 @@ class App extends Component {
           </Grid>
 
         )
-       
       } 
-    
     }
   
 

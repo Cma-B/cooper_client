@@ -1,13 +1,14 @@
 import React from "react";
 import {Header, Image, Form, Grid, Segment, Divider, Icon} from "semantic-ui-react"
 
+
 const options = [
   { key: 'm', text: 'Male', value: 'male' },
   { key: 'f', text: 'Female', value: 'female' },
 ]
 
-
 const InputFields = ({ onChangeHandler }) => {
+
 
   return (
     <>
@@ -27,7 +28,7 @@ const InputFields = ({ onChangeHandler }) => {
 Track your fitness by the Cooper Test
 </Header>
 
-<Form style={{ marginLeft: '2em', marginTop: '4em' }}>
+<Form style={{ marginLeft: '4em', marginTop: '4em' }}>
       <Form.Group widths='equal'> 
       <Form.Input fluid 
         label='Distance'
@@ -37,11 +38,15 @@ Track your fitness by the Cooper Test
       
         />
       <Form.Select
-            fluid
-            label='Gender'
-            options={options}
-            placeholder='Enter gender...'
-          />
+      onChange={onChangeHandler} 
+      name="gender" 
+      id="gender"
+      fluid
+      label='Gender'
+       options={options}
+       placeholder='Enter gender...'
+        />
+          
           <Form.Input fluid label='Age' placeholder='Enter age...' onChange={onChangeHandler} name="age" id="age"/>
           
     </Form.Group>
