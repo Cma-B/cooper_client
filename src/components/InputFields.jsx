@@ -1,5 +1,5 @@
 import React from "react";
-import {Header, Image, Form, Grid, Segment, Divider, Icon} from "semantic-ui-react"
+import {Header, Image, Form, Grid, Divider,} from "semantic-ui-react"
 
 
 const options = [
@@ -59,12 +59,9 @@ Track your fitness by the Cooper Test
   </Grid.Column>
     </Grid>
     
-    <Divider vertical
-     style={{fontSize:'1em',
-     fontStyle:'italic', 
-     fontFamily:'Bradley Hand, cursive' }}
-     >THE COOPER TEST</Divider>
+  
    
+
     </>
   );
 };

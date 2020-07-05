@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { getData } from '../modules/performanceData';
-import {Line} from 'react-chartjs-2';
+import {Line, Doughnut} from 'react-chartjs-2';
+import {Header, Image, Form, Grid, Rail, Segment} from "semantic-ui-react"
+
 
 class DisplayPerformanceData extends Component {
   state = {
@@ -40,37 +42,29 @@ class DisplayPerformanceData extends Component {
         datasets: [{
           data: distances,
           label: "saved distance",
-          fill: false,
-          lineTension: 0.2,
-          backgroundColor: 'rgba(75,192,192,0.4)',
-          borderColor: 'rgba(75,192,192,1)',
-          borderCapStyle: 'butt',
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: 'miter',
-          pointBorderColor: 'rgba(75,192,192,1)',
-          pointBackgroundColor: '#fff',
-          pointBorderWidth: 1,
-          pointHoverRadius: 5,
-          pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-          pointHoverBorderColor: 'rgba(220,220,220,1)',
-          pointHoverBorderWidth: 2,
-          pointRadius: 1,
-          pointHitRadius: 10, 
-
+          fill: true,
+          borderColor:'rgba(75,192,192,1)',
+          backgroundColor:'rgba(75,192,192,0.4)'
         }]
       }
-
+      
       dataIndex = (
-        <div >
-          <Line data={data}
-         
+        
+            <Line 
+            data={data}
+            width={500}
+            height={300}
+            options={{ maintainAspectRatio: false }}
           />
-        </div>
+        
+
+    
+       
       )
     }
 
     return (
+
       <div>
         {dataIndex}
       </div>

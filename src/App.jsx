@@ -136,10 +136,11 @@ class App extends Component {
         )
       } 
     }
-  
+
 
     return (
       <>
+
         <InputFields onChangeHandler={this.onChangeHandler} />
         {renderLogin}
         <DisplayCooperResult
@@ -151,6 +152,11 @@ class App extends Component {
         entryHandler={() => this.setState({ entrySaved: true, updateIndex: true })}
 />
 {performanceDataIndex}
+<Divider vertical
+  style={{fontSize:'1em',
+  fontStyle:'italic', 
+  fontFamily:'Bradley Hand, cursive' }}
+  >THE COOPER TEST</Divider>
       </>
     );
   }
