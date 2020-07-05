@@ -55,8 +55,8 @@ class App extends Component {
     <Button
               onClick={() => this.setState({ renderLoginForm: true })}
               size="large"
-              color="blue"
-              floated="left"
+              color="black"
+              floated="center"
             >
               Login
             </Button>
