@@ -4,7 +4,7 @@ import InputFields from "./components/InputFields";
 import LoginForm from "./components/LoginForm";
 import { authenticate } from './modules/auth';
 import DisplayPerformanceData from "./components/DisplayPerformanceData"
-import { Button, Grid, Form, Icon, Message, Segment, Divider, Header, Placeholder } from 'semantic-ui-react'
+import { Button, Grid, Icon, Message, Image, Divider, Segment } from 'semantic-ui-react'
 
 
 class App extends Component {
@@ -140,9 +140,13 @@ class App extends Component {
         entrySaved={this.state.entrySaved}
         entryHandler={() => this.setState({ entrySaved: true, updateIndex: true })}
 />
+
 {performanceDataIndex}
 
+
+  
       </>
+      
     );
   }
 }

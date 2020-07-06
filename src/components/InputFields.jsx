@@ -1,5 +1,5 @@
 import React from "react";
-import {Header, Image, Form, Grid, Divider,} from "semantic-ui-react"
+import {Header, Image, Form, Grid, Divider,Segment} from "semantic-ui-react"
 
 
 const options = [
@@ -12,10 +12,10 @@ const InputFields = ({ onChangeHandler }) => {
 
   return (
     <>
-
+ <Segment placeholder>
 <Grid columns={2} relaxed='very'>
-  <Grid.Column >
-    <Header textAlign="center" >
+  <Grid.Column>
+    <Header textAlign="center">
     <Image
   
   size='huge'
@@ -54,11 +54,17 @@ Track your fitness by the Cooper Test
     </Form>
     
   </Grid.Column>
+  <Divider vertical
+  style={{fontSize:'1em',
+  fontStyle:'italic', 
+  fontFamily:'Bradley Hand, cursive' }}
+  ></Divider>
   <Grid.Column>
-  
+  <Image src='https://miro.medium.com/max/1400/1*0qr6Ji5wDCl8YDnTCAxesw.jpeg' size='big'/>
   </Grid.Column>
+ 
     </Grid>
-    
+    </Segment>
   
    
 

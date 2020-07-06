@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getData } from '../modules/performanceData';
 import {Line, Doughnut} from 'react-chartjs-2';
-import {Header, Image, Form, Grid, Rail, Segment} from "semantic-ui-react"
+import {Grid,} from "semantic-ui-react"
 
 
 class DisplayPerformanceData extends Component {
@@ -31,6 +31,7 @@ class DisplayPerformanceData extends Component {
     let dataIndex;
 
     if (this.state.performanceData != null) {
+    
       const distances = []
       const labels = []
     this.state.performanceData.forEach (entry => {
@@ -42,22 +43,37 @@ class DisplayPerformanceData extends Component {
         datasets: [{
           data: distances,
           label: "saved distance",
-          fill: true,
-          borderColor:'rgba(75,192,192,1)',
-          backgroundColor:'rgba(75,192,192,0.4)'
+          fill: false,
+          lineTension: 0.3,
+          backgroundColor: '#000066',
+          borderColor: '#000066',
+          borderCapStyle: 'butt',
+          borderDash: [],
+          pointBorderColor: '#000000',
+          pointBackgroundColor: '#000000',
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: '#ccccff',
+          pointHoverBorderColor: 'rgba(220,220,220,1)',
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
         }]
       }
       
       dataIndex = (
-
-
+        <Grid columns={2} relaxed='very'>
+          
+          <Grid.Column style={{ marginLeft: '2em'}}>
+           
             <Line 
             data={data}
-            width={2000}
+            width={100}
             height={300}
             options={{ maintainAspectRatio: false }}
           />
-       
+      </Grid.Column>
+       </Grid>
       )
     }
 
