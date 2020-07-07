@@ -3,7 +3,7 @@ describe("User attempts save data", () => {
       cy.server();
       cy.route({
         method: "POST",
-        url: "https://rails-cooper-sima-boreiri.herokuapp.com//api/v1/auth/sign_in",
+        url: "http://localhost:3000/api/v1/auth/sign_in",
         response: "fixture:login.json",
         headers: {
           uid: "user@mail.com"
@@ -11,7 +11,7 @@ describe("User attempts save data", () => {
       });
 cy.route({
     method: "POST",
-    url: "https://rails-cooper-sima-boreiri.herokuapp.com//api/v1/performance_data",
+    url: "http://localhost:3000/api/v1/performance_data",
     response: {},
     headers: {
         uid: "user@mail.com"
